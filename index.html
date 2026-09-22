@@ -646,7 +646,7 @@
   .st{font-size:15px;gap:12px;}
   .st .sdot{width:22px;height:22px;}
 
-  /* behavior analytics */
+  /* behaviour analytics */
   .metric .mk{font-size:11px;}
   .metric .mv{font-size:20px;}
   .metric .mv.sm{font-size:15px;}
@@ -1023,49 +1023,6 @@
   .mj-unlock-strip.show{display:flex;}
   .mj-unlock-strip .lk{width:26px;height:26px;border-radius:8px;background:rgba(54,214,196,.16);display:flex;align-items:center;justify-content:center;color:#8ff0e4;flex:0 0 auto;}
   .mj-unlock-strip b{color:#8ff0e4;font-weight:800;}
-  /* ============================================================
-     JOURNEY IN RIGHT COLUMN (between Patient Stage + Behavior Analytics)
-     ============================================================ */
-  .land .col-right{height:auto;}
-  .land .col-left{height:auto;}              /* synced to AI platform bottom in JS */
-  .col-right .analytics-box{flex:0 0 auto;height:600px;}
-  .journey-box{flex:0 0 auto;}
-  .journey-box .panel-head{position:relative;}
-  .jb-badge{margin-left:auto;font-size:10.5px;font-weight:800;letter-spacing:.6px;color:#06151b;background:linear-gradient(90deg,#36d6c4,#7fe0d4);padding:4px 10px;border-radius:20px;}
-  .journey-box .panel-sub{margin:6px 0 12px;line-height:1.45;}
-  .journey-box .mj-lock-strip,.journey-box .mj-unlock-strip{font-size:13px;line-height:1.4;margin-bottom:12px;padding:9px 12px;}
-  .mj-section.mj-side{background:none;border:0;border-radius:0;padding:0;box-shadow:none;}
-  .mj-section.mj-side.locked{opacity:.5;}
-  .jb-prog{margin-bottom:12px;}
-  .jb-prog-row{display:flex;justify-content:space-between;align-items:baseline;font-size:13.5px;color:#dceef3;margin-bottom:6px;}
-  .jb-prog-row b{color:#8ff0e4;}
-  .jb-prog-n{font-size:12px;color:var(--c-soft);font-variant-numeric:tabular-nums;}
-  .jb-bar{height:6px;border-radius:4px;background:rgba(255,255,255,.08);overflow:hidden;}
-  .jb-bar > i{display:block;height:100%;width:0;border-radius:4px;background:linear-gradient(90deg,#3fa9c0,#36d6c4);transition:width .45s ease;}
-  .journey-box .mj-phases{flex-direction:column;min-width:0;gap:8px;}
-  .journey-box .mj-phase{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 11px;border-radius:12px;transition:border-color .2s,background .2s;}
-  .journey-box .mj-phase .pn{margin:0;white-space:normal;text-transform:none;letter-spacing:0;display:flex;flex-direction:column;gap:2px;min-width:0;}
-  .journey-box .mj-phase .pn .pnum{font-size:10.5px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:#7b98a1;}
-  .journey-box .mj-phase .pn .pname{font-size:13.5px;font-weight:700;color:#cfe6ea;line-height:1.25;}
-  .journey-box .mj-phase.ph-cur{border-color:rgba(54,214,196,.55);background:rgba(54,214,196,.07);}
-  .journey-box .mj-phase.ph-cur .pnum{color:#36d6c4;}
-  .journey-box .mj-phase.ph-cur .pname{color:#fff;}
-  .journey-box .mj-phase.ph-done .pnum{color:#5fb8ac;}
-  .journey-box .mj-wk-row{gap:7px;flex:0 0 228px;justify-content:flex-start;}
-  .journey-box .mj-wk{width:40px;height:40px;font-size:14px;border-radius:10px;}
-  .journey-box .mj-chk{width:40px;height:40px;}
-  .journey-box .mj-chk .dia{width:26px;height:26px;}
-  .journey-box .mj-chk .dia span{font-size:10px;}
-  .journey-box .mj-wk:focus-visible,.journey-box .mj-chk:focus-visible,.journey-box .mj-rec:focus-visible{outline:2px solid #7fd4e2;outline-offset:2px;}
-  .journey-box .mj-reclabel{font-size:11px;}
-  .journey-box .mj-recrow{display:grid;align-items:stretch;grid-template-columns:repeat(3,1fr);min-width:0;gap:7px;}
-  .journey-box .mj-rec{padding:8px 10px;}
-  .journey-box .mj-rec .rd{font-size:10px;}
-  .journey-box .mj-rec .rt{font-size:12px;white-space:normal;line-height:1.3;}
-  .jb-foot{margin-top:12px;display:flex;flex-direction:column;gap:6px;}
-  .jb-foot .leg{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--c-soft);}
-  .jb-foot .leg i{width:9px;height:9px;border-radius:3px;display:inline-block;margin-right:5px;vertical-align:0;}
-  .jb-note{font-size:12px;color:#7b98a1;line-height:1.4;}
 </style>
 
 <style id="mobile-mode">
@@ -1094,6 +1051,26 @@
   <div class="land-hd">
     <h1><b>EZScript</b> &mdash; Intelligent Patient Platform Landscape</h1>
     <p class="land-sub">A live view of how EZScript orchestrates a patient's dynamic journey. Click anywhere inside the <b>Patient360</b> app &mdash; watch the AI platform process the interaction, sync with the brand CRM and data layer, and advance the patient along their journey.</p>
+  </div>
+
+  <!-- ===================== TREATMENT MOTIVATIONAL JOURNEY (on top) ===================== -->
+  <div class="mj-topwrap">
+    <div class="mj-lock-strip" id="mjLockStrip"><span class="lk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span><div><b>Journey locked.</b> The Treatment Motivational Journey activates once the patient enrolls in savings.</div></div>
+    <div class="mj-unlock-strip" id="mjUnlockStrip"><span class="lk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 7.5-1.8"/></svg></span><div><b>Journey unlocked!</b> The patient is enrolled &mdash; tap any week, checkpoint, or recovery step to push its message to Patient360.</div></div>
+    <div class="mj-section mj-top locked" id="mjSection">
+      <div class="mj-hd">
+        <div class="t"><span class="badge">20-Week Program</span><div><b>Treatment Motivational Journey</b><span class="s">Weekly education + monthly refill checkpoints &mdash; with a dynamic Refill Recovery branch when a refill is missed.</span></div></div>
+        <div class="leg"><span><i style="background:#36d6c4"></i>Weekly message</span><span><i style="background:#ff8a4c;transform:rotate(45deg)"></i>Refill checkpoint</span><span><i style="background:rgba(255,138,76,.5)"></i>Recovery step</span></div>
+      </div>
+      <div class="mj-flow">
+        <div class="mj-flabel"><span class="dot"></span>Dynamic Journey &middot; adapts to refill behaviour (patients resume where they left off &mdash; never restart at Week 1)</div>
+        <div class="mj-phases" id="mjPhases"></div>
+        <div class="mj-reclane" id="mjRecLane">
+          <div class="mj-reclabel">&#9888; Refill Recovery Journey &mdash; triggered: no refill detected at checkpoint</div>
+          <div class="mj-recrow" id="mjRecRow"></div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="land arch" id="arch">
@@ -1203,7 +1180,7 @@
           <div class="crm-row muted" id="dynNode" style="cursor:default" onclick="dynToggle()">
             <span class="crm-cv" style="opacity:0">&#9656;</span>
             <span class="crm-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a4 4 0 0 0-4 4 3 3 0 0 0-1 5.8V15a3 3 0 0 0 5 2 3 3 0 0 0 5-2v-2.2A3 3 0 0 0 16 7a4 4 0 0 0-4-4z"/><path d="M12 7v10"/></svg></span>
-            <span class="crm-tx"><b>Dynamic Journey</b><span>Behavioral / AI-driven rules</span></span>
+            <span class="crm-tx"><b>Dynamic Journey</b><span>Behavioural / AI-driven rules</span></span>
             <span class="crm-mtag" id="dynTag">ADAPTIVE</span>
           </div>
           <div class="crm-kids" id="dyn-kids"><div id="dynRecs"></div></div>
@@ -1280,23 +1257,6 @@
 
         <!-- HOME VIEW -->
         <div id="view-home">
-          <div class="p360msg" id="p360msg" onclick="this.classList.remove('show')">
-            <span class="pmi"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v12H7l-3 3z"/><path d="M8 9h8M8 13h5"/></svg></span>
-            <span class="pmx"><b id="p360msgHead">Welcome to Auvelity OnMySide&trade;</b><span id="p360msgTxt">Here&rsquo;s how to get the most from your treatment &mdash; tap to explore.</span></span>
-          </div>
-
-          <div class="sec-label" id="pmLabel">Personal Message</div>
-          <div class="pm" id="pmBlock">
-            <span class="av"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span>
-            <div class="pm-body">
-              <p id="pmText">We can send you information to help you learn more about how it works, what to expect on treatment.</p>
-              <a class="pm-cta" id="pmUpdates" href="https://www.auvelity.com/mdd/stay-connected#signupForm" target="_blank" rel="noopener" onclick="trackUpdates()">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>
-                Enroll for Updates
-              </a>
-            </div>
-          </div>
-
           <div class="adh-msg" id="adhMsg" onclick="openJourney()" title="Open Your Journey" style="display:none">
             <div class="am-top">
               <span class="am-eyebrow"><svg class="mi" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9a6 6 0 0 1 12 0c0 5 2 6 2 6H4s2-1 2-6z"/><path d="M10 19a2 2 0 0 0 4 0"/></svg><span id="amEyebrow">Your Program</span></span>
@@ -1453,31 +1413,8 @@
         <div class="stage-list" id="stageList"></div>
       </div>
 
-      <!-- ===================== TREATMENT MOTIVATIONAL JOURNEY (right column) ===================== -->
-      <div class="panel journey-box" id="journeyBox">
-        <div class="panel-head"><span class="pdot"></span>Treatment Motivational Journey<span class="jb-badge">20 weeks</span></div>
-        <p class="panel-sub">Weekly education plus monthly refill checkpoints. If a refill is missed, a Refill Recovery branch opens below.</p>
-        <div class="mj-lock-strip" id="mjLockStrip"><span class="lk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span><div><b>Locked.</b> The journey opens once the patient enrolls in savings. To unlock it, tap <b>Enrolled for Copay</b> under Website in the Origination panel on the left.</div></div>
-        <div class="mj-unlock-strip" id="mjUnlockStrip"><span class="lk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 7.5-1.8"/></svg></span><div><b>Unlocked.</b> Tap a week, refill checkpoint, or recovery step to send its message to Patient360.</div></div>
-        <div class="mj-section mj-side locked" id="mjSection">
-          <div class="jb-prog">
-            <div class="jb-prog-row"><span id="mjProgTxt">Not started &mdash; tap Week 1</span><span class="jb-prog-n" id="mjProgN">0 / 20</span></div>
-            <div class="jb-bar"><i id="mjProgBar"></i></div>
-          </div>
-          <div class="mj-phases" id="mjPhases"></div>
-          <div class="mj-reclane" id="mjRecLane">
-            <div class="mj-reclabel">&#9888; Refill Recovery &mdash; no refill detected at checkpoint</div>
-            <div class="mj-recrow" id="mjRecRow"></div>
-          </div>
-          <div class="jb-foot">
-            <div class="leg"><span><i style="background:#36d6c4"></i>Weekly message</span><span><i style="background:#ff8a4c;transform:rotate(45deg)"></i>Refill checkpoint</span><span><i style="background:rgba(255,138,76,.5)"></i>Recovery step</span></div>
-            <div class="jb-note">Adapts to refill behavior: patients resume where they left off and never restart at Week 1.</div>
-          </div>
-        </div>
-      </div>
-
       <div class="panel analytics-box">
-        <div class="panel-head"><span class="pdot"></span>Patient Behavior Analytics</div>
+        <div class="panel-head"><span class="pdot"></span>Patient Behaviour Analytics</div>
         <p class="panel-sub">A simulated read on how this patient moves through the flow. Every tap, link, and screen updates the matrix live.</p>
         <div class="metrics" id="metrics"></div>
         <div class="risk" id="risk"><span class="rk">Chance of abandonment</span><span class="rv na" id="riskVal">&mdash;</span></div>
@@ -1539,11 +1476,11 @@
     </div>
     <div class="adh-bar-wrap"><div class="adh-bar" id="adhBar"></div></div>
     <div class="adh-rail" id="adhRail"></div>
-    <div class="adh-hint">Each touchpoint is a CRM email, text, or push tied to an engagement signal. Click one to deliver it &mdash; Patient360, the patient stage, and behavior analytics update from the interaction.</div>
+    <div class="adh-hint">Each touchpoint is a CRM email, text, or push tied to an engagement signal. Click one to deliver it &mdash; Patient360, the patient stage, and behaviour analytics update from the interaction.</div>
   </div>
   <div class="adh-toast" id="adhToast"></div>
 
-  <!-- Journey detail: message preview + engagement matrix (driven by the journey panel in the right column) -->
+  <!-- Journey detail: message preview + engagement matrix (driven by the flow band on top) -->
   <div class="mj-section" id="mjDetail">
     <div class="mj-hd">
       <div class="t"><span class="badge">Journey Detail</span><div><b>Message preview &amp; engagement</b><span class="s">Mirrors the message pushed to Patient360, with the live data collected.</span></div></div>
@@ -1555,14 +1492,14 @@
           <div class="mj-msgwrap" id="mjScreen"></div>
           <div class="mj-isi">Illustrative messages &mdash; paraphrased for demo; subject to MLR/PRC review. See full Prescribing Information, incl. Boxed Warning, at auvelity.com.</div>
         </div></div>
-        <div class="mj-phone-hint">Tap a week, checkpoint, or recovery step in the Treatment Motivational Journey panel to deliver its message here.</div>
+        <div class="mj-phone-hint">Tap a week, checkpoint, or recovery step in the journey on top to deliver its message here.</div>
       </div>
 
       <div class="mj-data" id="mjData"></div>
     </div>
   </div>
 
-  <div class="console-note">Illustrative EZScript demo themed for auvelity.com &mdash; not affiliated with or approved by Axsome Therapeutics. Clinical statements paraphrase auvelity.com; behavior analytics are simulated for demonstration. For MLR/PRC review before any external use.</div>
+  <div class="console-note">Illustrative EZScript demo themed for auvelity.com &mdash; not affiliated with or approved by Axsome Therapeutics. Clinical statements paraphrase auvelity.com; behaviour analytics are simulated for demonstration. For MLR/PRC review before any external use.</div>
 
   </div><!-- /stack -->
 
@@ -1612,10 +1549,7 @@ var TILES_BY = {
   mdd:[
     {k:'journey',  label:'Your Journey', brand:true},
     {k:'savings',  label:'OnMySide Savings'},
-    {k:'why',      label:'Why AUVELITY'},
-    {k:'about',    label:'About Depression'},
     {k:'doctor',   label:'Connect w/ Provider'},
-    {k:'reminders',label:'Reminders'},
     {k:'tracker',  label:'Mood Check-In'},
     {k:'stories',  label:'Patient Stories'},
     {k:'resources',label:'Resources & Tips'}
@@ -1910,7 +1844,7 @@ function updateEnrollUI(){
   updateJourneyLock();
   fitHome();
 }
-/* Journey panel (right column) is greyed + non-clickable until the patient enrolls,
+/* Journey flow band (on top) is greyed + non-clickable until the patient enrolls,
    then pops into colour and becomes interactive. */
 function updateJourneyLock(){
   var sec=document.getElementById('mjSection');
@@ -1921,7 +1855,6 @@ function updateJourneyLock(){
   if(det) det.classList.toggle('locked', !enrolled);
   if(lock) lock.classList.toggle('show', !enrolled);
   if(unlock) unlock.classList.toggle('show', enrolled);
-  if(window.syncLandHeights) syncLandHeights();
 }
 function updatePersonalMessage(){
   /* Restore the default "We can send you information..." message + Enroll-for-Updates button.
@@ -2200,7 +2133,7 @@ function vote(el,val){
   else { A.votedDown=true; A.votedUp=false; track('signal','\uD83D\uDC4E','Self-reported: not currently on treatment','adherence'); }
 }
 
-/* ===== demo console: stage + behavior analytics ===== */
+/* ===== demo console: stage + behaviour analytics ===== */
 var stageHistory = [];
 var A = { taps:0, screens:{}, screenCount:0, interest:{cost:0,access:0,adherence:0,education:0}, engaged:false, votedUp:false, votedDown:false, savingsViewed:false, ehrDone:false };
 var INTEREST_OF = { savings:'cost', doctor:'access', reminders:'adherence', tracker:'adherence',
@@ -2354,7 +2287,7 @@ function resetSessionState(){
   document.getElementById('ehrChip').style.display='none';
   document.getElementById('msgBody').innerHTML='<div class="msg-empty" id="msgEmpty">No messages yet.<br><br>Trigger the <b>EHR</b> origination on the left to deliver the patient\u2019s Rx text.</div>';
   var bb=document.getElementById('saveBanner'); bb.className='save'; bb.setAttribute('onclick','openSavings()'); bb.style.cursor=''; bb.innerHTML=ORIG_BANNER_INNER;
-  document.getElementById('pmText').innerHTML=ORIG_PM;
+  setPM(ORIG_PM);
   resetCRM();
   var vbtns=document.querySelectorAll('.vbtn'); for(var i=0;i<vbtns.length;i++) vbtns[i].classList.remove('sel');
   var vsub=document.getElementById('statusQ'); if(vsub) vsub.textContent='Are you currently taking AUVELITY?';
@@ -2400,7 +2333,7 @@ function resetDemo(){
   A={ taps:0, screens:{}, screenCount:0, interest:{cost:0,access:0,adherence:0,education:0}, engaged:false, votedUp:false, votedDown:false, savingsViewed:false, ehrDone:false };
   var b=document.getElementById('saveBanner');
   b.className='save'; b.setAttribute('onclick','openSavings()'); b.style.cursor=''; b.innerHTML=ORIG_BANNER_INNER;
-  document.getElementById('pmText').innerHTML=ORIG_PM;
+  setPM(ORIG_PM);
   if(typeof updatePersonalMessage==='function') updatePersonalMessage();
   originPrefix='Prescribed';
   var chs=document.querySelectorAll('.orig-ch'); for(var c=0;c<chs.length;c++) chs[c].classList.remove('sel','locked');
@@ -2421,7 +2354,8 @@ function resetDemo(){
 var enroll = { done:false, insurance:null };
 var INS_LABEL = { commercial:'Commercial', government:'Government', uninsured:'Uninsured' };
 var ORIG_BANNER_INNER = document.getElementById('saveBanner').innerHTML;
-var ORIG_PM = document.getElementById('pmText').innerHTML;
+var ORIG_PM = '';
+function setPM(h){ var e=document.getElementById('pmText'); if(e) e.innerHTML=h; }
 
 function showStep(title, html){
   document.getElementById('detail').innerHTML = html;
@@ -2580,11 +2514,11 @@ function confirmPickup(picked){
   var nice=new Date(d+'T00:00').toLocaleDateString(undefined,{month:'long',day:'numeric',year:'numeric'});
   var pm=document.getElementById('pmText');
   if(picked){
-    pm.innerHTML='<b>You started your prescription on '+nice+'.</b> Keep going \u2014 explore reminders and support to stay on track.';
+    setPM('<b>You started your prescription on '+nice+'.</b> Keep going \u2014 explore reminders and support to stay on track.');
     setStage(originPrefix+' - Non-Commercial - On therapy');
     if(typeof setFill==='function') setFill('filled');
   } else {
-    pm.innerHTML='<b>You\u2019re planning to start AUVELITY on '+nice+'.</b> We\u2019ll remind you and share options to help you pick up your prescription.';
+    setPM('<b>You\u2019re planning to start AUVELITY on '+nice+'.</b> We\u2019ll remind you and share options to help you pick up your prescription.');
     setStage(originPrefix+' - Non-Commercial - Not on therapy');
     if(typeof setFill==='function') setFill('none');
   }
@@ -2690,21 +2624,6 @@ function drawCRMWire(srcEl){
   path.setAttribute('d',d);
   wire.style.display='block';
 }
-/* Left column ends at the bottom of the AI-Powered Platform box; the right column
-   now holds the journey, so that point moves. Keep it in sync. */
-function syncLandHeights(){
-  var land=document.getElementById('arch'), ai=document.querySelector('.land .ai-wrap'), cl=document.querySelector('.land .col-left');
-  if(!land||!ai||!cl) return;
-  var h=Math.round(ai.getBoundingClientRect().bottom - cl.getBoundingClientRect().top);
-  if(h>0 && cl.style.height!==h+'px'){
-    cl.style.height=h+'px';
-    if(typeof crmLinkSrcId!=='undefined' && crmLinkSrcId){ var s=document.getElementById(crmLinkSrcId); if(s) drawCRMWire(s); }
-  }
-}
-window.syncLandHeights=syncLandHeights;
-window.addEventListener('load', syncLandHeights);
-if(window.ResizeObserver){ document.addEventListener('DOMContentLoaded', function(){ var r=document.querySelector('.land .col-right'); if(r) new ResizeObserver(syncLandHeights).observe(r); }); }
-window.addEventListener('resize', syncLandHeights);
 window.addEventListener('resize', function(){ if(crmLinkSrcId){ var s=document.getElementById(crmLinkSrcId); if(s) drawCRMWire(s); } });
 
 function markCRMReady(){
@@ -2827,7 +2746,7 @@ function crmP360(){
   if(txt) txt.innerHTML = (crmCategory()==='commercial')
     ? 'Your OnMySide savings card is ready \u2014 tap to view &amp; save it.'
     : 'See your options to get AUVELITY \u2014 tap to explore.';
-  document.getElementById('p360msg').classList.add('show');
+  var _p3=document.getElementById('p360msg'); if(_p3) _p3.classList.add('show');
   showAppView();
   track('crm','\uD83D\uDCF2','CRM \u2192 Patient360 in-app message delivered','education');
 }
@@ -3055,7 +2974,7 @@ function cycleFill(){
 }
 function setFill(v){ sim.fill=v; renderSim(); evalCampaigns(); }
 
-/* ---- Dynamic Journey (behavior-triggered follow-ups) ---- */
+/* ---- Dynamic Journey (behaviour-triggered follow-ups) ---- */
 function topInterestKey(){ var best=null,bv=0; for(var k in A.interest){ if(A.interest[k]>bv){ bv=A.interest[k]; best=k; } } return best; }
 var DYN_RECS = {
   cost:[{t:'OnMySide savings reminder',s:'Re-surface $10 offer + how it works'},{t:'Pharmacy locator',s:'Nearest pharmacies stocking AUVELITY'},{t:'How the savings card works',s:'Short explainer to remove cost friction'}],
@@ -3219,7 +3138,7 @@ function fireTouchpoint(i){
   }
   /* render the message inside Patient360 */
   if(tp.ch==='email') renderAdhEmail(tp); else renderAdhSms(tp);
-  /* update stage + behavior analytics from the engagement signal (log once) */
+  /* update stage + behaviour analytics from the engagement signal (log once) */
   if(isNew){
     setStage(tp.stage);
     track('crm', tp.icon, 'Adherence \u2192 '+tp.title+' ('+CH_LABEL[tp.ch]+' sent)', tp.interest);
@@ -3277,7 +3196,7 @@ var MJ_BARRIERS=[
  {k:'other',l:'Other',t:'Tell Us More',m:'Tell us more so your care team can help remove whatever\u2019s in the way.'}
 ];
 
-var mjS={week:0,days:0,refills:0,streak:0,inRecovery:false,recStep:-1,barriers:[],viewed:0,edu:0,mood:0,badges:[],recoveredFrom:0};
+var mjS={week:1,days:7,refills:0,streak:0,inRecovery:false,recStep:-1,barriers:[],viewed:0,edu:0,mood:0,badges:[],recoveredFrom:0};
 
 function mjGreet(){
   if(mjS.week<=0) return 'Hi <b>'+MJ_NAME+'</b> \u2014 welcome to your AUVELITY journey. Tap Week 1 to begin.';
@@ -3289,18 +3208,13 @@ function mjChannel(txt){ var c=document.getElementById('mjChannel'); if(c) c.tex
 function mjRenderFlow(){
   var host=document.getElementById('mjPhases'); if(!host) return; host.innerHTML='';
   for(var p=0;p<MJ_PHASES.length;p++){
-    var phWeeks=MJ_WEEKS.filter(function(x){return x.ph===p;});
-    var curPh=(mjS.week>0 && MJ_WEEKS[mjS.week-1]) ? MJ_WEEKS[mjS.week-1].ph : -1;
-    var ph=document.createElement('div');
-    ph.className='mj-phase'+(p===curPh?' ph-cur':'')+(p<curPh?' ph-done':'');
-    ph.innerHTML='<div class="pn"><span class="pnum">Phase '+(p+1)+'</span><span class="pname">'+MJ_PHASES[p]+'</span></div>';
+    var ph=document.createElement('div'); ph.className='mj-phase';
+    ph.innerHTML='<div class="pn">Phase '+(p+1)+' &middot; '+MJ_PHASES[p]+'</div>';
     var row=document.createElement('div'); row.className='mj-wk-row';
     MJ_WEEKS.filter(function(x){return x.ph===p;}).forEach(function(x){
       var el=document.createElement('div');
       var cls='mj-wk'+(x.w<mjS.week?' done':'')+(x.w===mjS.week&&!mjS.inRecovery?' cur':'');
       el.className=cls; el.textContent=x.w; el.title='Week '+x.w+': '+x.t;
-      el.setAttribute('role','button'); el.tabIndex=0; el.setAttribute('aria-label','Week '+x.w+': '+x.t);
-      el.onkeydown=function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); this.click(); } };
       el.onclick=(function(w){return function(){ mjWeek(w); };})(x.w);
       row.appendChild(el);
       if(MJ_CHECK.indexOf(x.w)>-1){
@@ -3311,22 +3225,11 @@ function mjRenderFlow(){
         chk.title='Refill checkpoint \u2014 Day '+((ci+1)*30);
         chk.innerHTML='<div class="dia"><span>D'+((ci+1)*30)+'</span></div>';
         chk.onclick=(function(idx){return function(){ mjCheckpoint(idx); };})(ci);
-        chk.setAttribute('role','button'); chk.tabIndex=0; chk.setAttribute('aria-label',chk.title);
-        chk.onkeydown=function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); this.click(); } };
         row.appendChild(chk);
       }
     });
     ph.appendChild(row); host.appendChild(ph);
   }
-  // progress readout
-  var pt=document.getElementById('mjProgTxt'), pn=document.getElementById('mjProgN'), pb=document.getElementById('mjProgBar');
-  if(pt){
-    if(mjS.inRecovery) pt.innerHTML='<b>Refill Recovery active</b> &mdash; resolve the refill to continue';
-    else if(mjS.week>0) pt.innerHTML='Week <b>'+mjS.week+'</b> &middot; '+MJ_PHASES[MJ_WEEKS[mjS.week-1].ph];
-    else pt.innerHTML='Not started &mdash; tap Week 1';
-  }
-  if(pn) pn.textContent=mjS.week+' / '+MJ_WEEKS.length;
-  if(pb) pb.style.width=(mjS.week/MJ_WEEKS.length*100)+'%';
   // recovery lane
   var lane=document.getElementById('mjRecLane'); var rrow=document.getElementById('mjRecRow');
   if(mjS.inRecovery){ lane.classList.add('show'); } else { lane.classList.remove('show'); }
@@ -3338,7 +3241,6 @@ function mjRenderFlow(){
     el.onclick=(function(idx){return function(){ mjRecovery(idx); };})(i);
     rrow.appendChild(el);
   });
-  if(window.syncLandHeights) syncLandHeights();
 }
 
 function mjWeek(w){
@@ -3458,7 +3360,7 @@ function mjData(){
     '</div></div>';
 }
 function mjToast(msg){ adhToast(msg); }
-function scrollToJourney(){ var s=document.getElementById('mjSection'); if(s) s.scrollIntoView({behavior:'smooth',block:'center'}); }
+function scrollToJourney(){ var s=document.getElementById('mjSection'); if(s) s.scrollIntoView({behavior:'smooth',block:'start'}); }
 
 /* ---- Adherence messages surfaced ON the Patient360 page (under the personal message) ---- */
 var MJ_ALL=[];
@@ -3582,9 +3484,7 @@ function jUpdate(i){
 function jPlay(name){ adhToast('\u25B6 \u201c'+name+'\u201d \u2014 video plays in production'); track('screen','\u25B6\uFE0F','Journey video: '+name,'education'); }
 function jDoc(name){ adhToast('\u2193 \u201c'+name+'\u201d \u2014 PDF opens in production'); track('screen','\uD83D\uDCC4','Journey resource: '+name,'education'); }
 
-mjRenderFlow();
-mjPhone('<div class="mj-eyebrow">20-Week Program</div><div class="mj-card-t">Your motivational journey starts here</div><div class="mj-card-m">Every interaction is designed to <b>educate</b>, <b>encourage</b>, or <b>remove a barrier</b> to staying on therapy. Tap Week 1 in the flow above to begin \u2014 and try a refill checkpoint to see the dynamic Refill Recovery branch.</div>');
-mjData();
+mjWeek(1);
 showAdhMsg();
 updateJourneyLock();
 </script>
@@ -3608,12 +3508,24 @@ updateJourneyLock();
     for(var i=0;i<g.children.length;i++) g.children[i].style.display='';
   };
 
+  /* Journey card (Week 1 ...) shows on the landing page from the start, not only after enrollment */
+  window.updateEnrollUI = function(){
+    var enrolled = isEnrolled();
+    var lbl=document.getElementById('pmLabel'), blk=document.getElementById('pmBlock'), card=document.getElementById('adhMsg');
+    if(lbl) lbl.style.display = enrolled ? 'none' : '';
+    if(blk) blk.style.display = enrolled ? 'none' : '';
+    if(card) card.style.display = '';
+    try{ updateJourneyLock(); }catch(e){}
+    fitHome();
+  };
+
   /* flow: current patient? -> which condition -> Patient360 home */
   window.answerPrescribed = function(yes){
     prescribedStatus = yes ? 'yes' : 'no';
     originPrefix = yes ? 'Prescribed' : 'Prospect';
     try{ setStage(yes ? 'Prescribed \u2013 Engaged' : 'Prospect \u2013 Not yet prescribed'); }catch(e){}
     showIndicationSelect(function(){
+      adhIdx=0; showAdhMsg();
       updatePersonalMessage();
       showView('app'); goHomeSilent2();
       var m=document.getElementById('p360msg'); if(m) m.classList.add('show');
